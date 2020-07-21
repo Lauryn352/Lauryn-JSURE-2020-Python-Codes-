@@ -37,7 +37,7 @@ def fopdt(y,t,x,Km1,Km2,Km3,taum):
   #  try:
     if t <= 1:
                 Km1 = x[0]
-                dydt = Km1*y*(1-(y/taum))
+                dydt = Km1*y*(1-(y/taum)) 
     else: 
         if t <= 3:
                 Km2 = x[1]
@@ -86,10 +86,10 @@ def objective(x):
 
 # initial guesses
 x0 = np.zeros(4)
-x0[0] = 2.5 # Km1
-x0[1] = -1.1 # Km2 --> taum
-x0[2] = -0.2 # thetam
-x0[3] = 10000
+x0[0] = -7.0 # Km1
+x0[1] = 4.5 # Km2 --> taum
+x0[2] = 3.0 # thetam
+x0[3] = 1000000.5
 
 # show initial objective
 print('Initial SSE Objective: ' + str(objective(x0)))
@@ -130,6 +130,6 @@ plt.legend(loc='best')
 # plt.ylabel('Input Data')
 data = np.vstack((t,yp,ym2,)) # vertical stack
 data = data.T              # transpose data
-np.savetxt('datamd2.txt',data,delimiter=',')
-plt.savefig('outputmodel23Kmbetat1.png',dpi=300,bbox_inches='tight')
+np.savetxt('datamd3.txt',data,delimiter=',')
+plt.savefig('outputmodel33Kmtaum.png',dpi=300,bbox_inches='tight')
 plt.show()
