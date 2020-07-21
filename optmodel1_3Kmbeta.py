@@ -86,9 +86,9 @@ def objective(x):
 
 # initial guesses
 x0 = np.zeros(3)
-x0[0] = -1.25 # Km1
-x0[1] = 1.5 # Km2 --> taum
-x0[2] = 0.5 # thetam
+x0[0] = -1.11 # Km1
+x0[1] = 1.38 # Km2 --> taum
+x0[2] = 0.26 # thetam
 #x0[3] = 0.99
 
 # show initial objective
