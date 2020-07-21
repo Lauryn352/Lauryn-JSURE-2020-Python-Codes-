@@ -86,10 +86,10 @@ def objective(x):
  
 # initial guesses
 x0 = np.zeros(4)
-x0[0] = -25.0 # Km1
-x0[1] = 17.0 # Km2 --> taum
-x0[2] = 20.0 # thetam
-x0[3] = 0.0
+x0[0] = -24.15 # Km1
+x0[1] = 28.9 # Km2 --> taum
+x0[2] = 32.28 # thetam
+x0[3] = -2.02
 
 # show initial objective
 print('Initial SSE Objective: ' + str(objective(x0)))
